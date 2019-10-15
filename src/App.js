@@ -1,7 +1,10 @@
 import React from "react";
-import logo from "./logo.svg";
+//import logo from "./logo.svg";
 import "./App.css";
 import Section from "./components/section";
+import Syntax from "./components/sections/syntax";
+import Accessibility from "./components/sections/accessibility";
+import Performance from "./components/sections/performance";
 
 function App() {
   const json = require("./data/data.json");
@@ -22,9 +25,15 @@ function App() {
           Learn React
         </a> */}
       </header>
-      <Section className="test" h1={json.data[0].h1} code={json.data[0].code} />
-      <Section className="test" h1={json.data[1].h1} code={json.data[1].code} />
-      <Section className="test" h1={json.data[2].h1} code={json.data[2].code} />
+      <Section className="test" h1={json.data[0].h1} code={json.data[0].code}>
+        <Syntax />
+      </Section>
+      <Section className="test" h1={json.data[1].h1} code={json.data[1].code}>
+        <Accessibility />
+      </Section>
+      <Section className="test" h1={json.data[2].h1} code={json.data[2].code}>
+        <Performance />
+      </Section>
     </div>
   );
 }
@@ -32,3 +41,4 @@ function App() {
 export default App;
 
 // To load JSON, needed : https://webpack.js.org/loaders/json-loader/, also install typescript 1st
+// To fix issue with copying NPM projects that break reactjs commands : https://github.com/facebook/create-react-app/issues/200
