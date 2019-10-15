@@ -1,3 +1,31 @@
+* {
+  font-family: "Nobile", sans-serif;
+}
+
+html {
+  font-size: 16px;
+}
+
+abbr {
+  border-bottom: none !important;
+  cursor: inherit !important;
+  text-decoration: none !important;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.code {
+  background-color: #e8e8e8;
+  font-size: 0.85rem;
+}
+
+.code_highlight {
+  font-family: inherit;
+  background-color: rgba(174, 238, 174, 1);
+}
+
 .App {
 }
 
@@ -20,3 +48,5 @@
 .App-link {
   color: #09d3ac;
 }
+
+/* https://css-tricks.com/snippets/css/fluid-typography/ font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));*/

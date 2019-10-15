@@ -1,6 +1,7 @@
 import React from "react";
 //import logo from "./logo.svg";
 import "./App.css";
+import Navigation from "./components/navigation";
 import Section from "./components/section";
 import Syntax from "./components/sections/syntax";
 import Accessibility from "./components/sections/accessibility";
@@ -25,13 +26,29 @@ function App() {
           Learn React
         </a> */}
       </header>
-      <Section className="test" h1={json.data[0].h1} code={json.data[0].code}>
+      <Navigation />
+      <Section
+        id="syntax"
+        tabindex="-1"
+        h2={json.data[0].h2}
+        code={json.data[0].code}
+      >
         <Syntax />
       </Section>
-      <Section className="test" h1={json.data[1].h1} code={json.data[1].code}>
+      <Section
+        id="accessibility"
+        tabindex="-1"
+        h2={json.data[1].h2}
+        code={json.data[1].code}
+      >
         <Accessibility />
       </Section>
-      <Section className="test" h1={json.data[2].h1} code={json.data[2].code}>
+      <Section
+        id="performance"
+        tabindex="-1"
+        h2={json.data[2].h2}
+        code={json.data[2].code}
+      >
         <Performance />
       </Section>
     </div>

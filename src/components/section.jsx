@@ -13,8 +13,12 @@ class Section extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <section className={this.props.className}>
-          <h1>{this.props.h1}</h1>
+        <section
+          tabindex={this.props.tabindex}
+          id={this.props.id}
+          className={this.props.className}
+        >
+          <h2>{this.props.h2}</h2>
           <code>{this.props.code}</code>
           {this.props.children}
         </section>
